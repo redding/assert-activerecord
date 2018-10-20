@@ -1,6 +1,6 @@
-# AssertActiverecord
+# AssertActiveRecord
 
-TODO: Write a gem description
+Helpers for testing ActiveRecords in Assert test suites.  See https://github.com/redding/assert for reference.
 
 ## Usage
 

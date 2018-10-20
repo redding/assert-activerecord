@@ -1,5 +1,4 @@
 require "assert-activerecord/version"
 
-module AssertActiverecord
-  # TODO: your code goes here...
+module AssertActiveRecord
 end
