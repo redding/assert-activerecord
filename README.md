@@ -4,19 +4,21 @@ Helpers for testing ActiveRecords in Assert test suites.  See https://github.com
 
 ## Usage
 
-TODO: Write code samples and usage instructions here
+In general, you should never bundle or require this gem directly.  This gem only houses the framework for testing ActiveRecord using Assert.
+
+Instead you should bundle/require one of the AssertActiveRecord adapter gems.  These adapter gems contain all the specific logic for each major version of ActiveRecord.  These gems, in turn, will require in this gem and use its common framework.
+
+See the usage instructions for the adapter gem you need:
+
+* Rails 4 (ActiveRecord 4): https://github.com/redding/assert-activerecord4#usage
 
 ## Installation
 
-Add this line to your application's Gemfile:
+See the installation instructions for the adapter gem you need:
 
-    gem "assert-activerecord"
+* Rails 4 (ActiveRecord 4): https://github.com/redding/assert-activerecord4#installation
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+If, for some reason, you want to just install this gem directly:
 
     $ gem install assert-activerecord
 
