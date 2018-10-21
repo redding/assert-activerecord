@@ -1,5 +1,6 @@
 require "assert-activerecord/version"
 require "assert-activerecord/adapter"
+require "assert-activerecord/db_tests"
 
 module AssertActiveRecord
 
@@ -36,6 +37,14 @@ module AssertActiveRecord
 
   def self.connect_db
     self.adapter.connect_db
+  end
+
+  def self.transaction(&block)
+    self.adapter.transaction(&block)
+  end
+
+  def self.rollback!
+    self.adapter.rollback!
   end
 
   class DefaultAdapter
