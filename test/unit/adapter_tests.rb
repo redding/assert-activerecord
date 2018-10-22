@@ -24,25 +24,19 @@ module AssertActiveRecord::Adapter
 
     should have_imeths :test_env_name
     should have_imeths :drop_db, :create_db, :load_schema, :connect_db
+    should have_imeths :transaction, :rollback!
 
     should "know its test env name" do
       assert_equal "test", subject.test_env_name
     end
 
-    should "not implement its drop db method" do
+    should "not implement its adapter methods" do
       assert_raises(NotImplementedError){ subject.drop_db }
-    end
-
-    should "not implement its create db method" do
       assert_raises(NotImplementedError){ subject.create_db }
-    end
-
-    should "not implement its load schema method" do
       assert_raises(NotImplementedError){ subject.load_schema }
-    end
-
-    should "not implement its connect db method" do
       assert_raises(NotImplementedError){ subject.connect_db }
+      assert_raises(NotImplementedError){ subject.transaction }
+      assert_raises(NotImplementedError){ subject.rollback! }
     end
 
   end

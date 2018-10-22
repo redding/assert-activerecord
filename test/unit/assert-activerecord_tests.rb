@@ -13,6 +13,7 @@ module AssertActiveRecord
     should have_imeths :adapter
     should have_imeths :reset_db, :reset_db!
     should have_imeths :drop_db, :create_db, :load_schema, :connect_db
+    should have_imeths :transaction, :rollback!
 
     should "set the DefaultAdapter as its adapter by default" do
       assert_instance_of DefaultAdapter, AssertActiveRecord.adapter
@@ -23,6 +24,8 @@ module AssertActiveRecord
       assert_raises(NotImplementedError){ subject.create_db }
       assert_raises(NotImplementedError){ subject.load_schema }
       assert_raises(NotImplementedError){ subject.connect_db }
+      assert_raises(NotImplementedError){ subject.transaction }
+      assert_raises(NotImplementedError){ subject.rollback! }
     end
 
   end
