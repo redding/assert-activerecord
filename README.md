@@ -1,3 +1,5 @@
+=== **This has been archived and is not maintained.** ===
+
 # AssertActiveRecord
 
 Helpers for testing ActiveRecords in Assert test suites.  See https://github.com/redding/assert for reference.
